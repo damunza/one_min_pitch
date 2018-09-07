@@ -24,3 +24,14 @@ def new_pitch():
 
     title = 'Pitches'
     return render_template('new_pitch.html', title = title,pitch_form = form)
+
+@main.route('/pitch/<cat>')
+def category(cat):
+    '''
+    function to return the pitches
+    '''
+    category = Pitch.get_pitch(cat)
+    print(category)
+    title = f'{cat}'
+    return render_template('pitch.html',title = title, category = category)
+
