@@ -1,16 +1,20 @@
 from flask import render_template
+from flask_login import login_required
 from . import main
 from .forms import PitchForm
 from ..models import Pitch
+from ..auth.forms import RegistrationForm
 
 @main.route('/')
 def index():
     '''
     function that returns index and its content
     '''
-    return render_template('index.html')
+    form = RegistrationForm()
+    return render_template('index.html', registration_form = form)
 
 @main.route('/pitch', methods = ['GET','POST'])
+@login_required
 def new_pitch():
     form = PitchForm()
 
