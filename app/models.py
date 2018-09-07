@@ -16,3 +16,13 @@ class Pitch(db.Model):
     def get_pitch(cls,cat):
         pitch = Pitch.query.filter_by(category=cat).all()
         return pitch
+
+class User(db.Model):
+
+    __tablename__ = 'users'
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(255))
+
+    def __repr__(self):
+        return f'User {self.username}'
