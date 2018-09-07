@@ -13,7 +13,25 @@ def index():
     form = RegistrationForm()
     return render_template('index.html', registration_form = form)
 
-@main.route('/pitch', methods = ['GET','POST'])
+@main.route('/pitch')
+def home():
+    '''
+    function that returns root.html page and its content
+    '''
+    title = 'Home'
+    return render_template('root.html', title = title)
+
+@main.route('/pitch/<cat>')
+def category(cat):
+    '''
+    function to return the pitches
+    '''
+    category = Pitch.get_pitch(cat)
+    print(category)
+    title = f'{cat}'
+    return render_template('pitch.html',title = title, category = category)
+
+@main.route('/new-pitch',methods = ['GET', 'POST'])
 @login_required
 def new_pitch():
     form = PitchForm()
@@ -26,16 +44,7 @@ def new_pitch():
 
         new_pitch.save_pitch()
 
-    title = 'Pitches'
-    return render_template('root.html', title = title,pitch_form = form)
+    title = 'New Pitch'
+    return render_template('new_pitch.html', title=title, pitch_form = form)
 
-@main.route('/pitch/<cat>')
-def category(cat):
-    '''
-    function to return the pitches
-    '''
-    category = Pitch.get_pitch(cat)
-    print(category)
-    title = f'{cat}'
-    return render_template('pitch.html',title = title, category = category)
 
