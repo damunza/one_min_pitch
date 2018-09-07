@@ -2,6 +2,7 @@
 {% block content %}
 
 {% for c in category %}
+<div class="container-fluid">
 <div class="card-deck">
   <div class="card-title">
     <h5>{{c.category}}</h5>
@@ -10,6 +11,7 @@
     <p>{{c.pitch}}</p>
   </div>
 
+</div>
 </div>
 
 {% endfor %}
