@@ -1,0 +1,7 @@
+.ttb{
+  color: black;
+}
+.ttb.hover{
+  text-decoration: underline;
+  color: orange;
+}

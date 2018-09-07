@@ -27,7 +27,7 @@ def new_pitch():
         new_pitch.save_pitch()
 
     title = 'Pitches'
-    return render_template('new_pitch.html', title = title,pitch_form = form)
+    return render_template('root.html', title = title,pitch_form = form)
 
 @main.route('/pitch/<cat>')
 def category(cat):
