@@ -1,8 +1,8 @@
 from flask import render_template
 from flask_login import login_required
 from . import main
-from .forms import PitchForm
-from ..models import Pitch
+from .forms import PitchForm, CommentForm
+from ..models import Pitch, Comment
 from ..auth.forms import RegistrationForm
 
 @main.route('/')
@@ -47,4 +47,26 @@ def new_pitch():
     title = 'New Pitch'
     return render_template('new_pitch.html', title=title, pitch_form = form)
 
+@main.route('/comment')
+def comment():
+    '''
+    function to return the pitches
+    '''
+    comment = Comment.get_comment()
+    print(comment)
+    title = 'comments'
+    return render_template('comment.html',title = title, comment = comment)
 
+@main.route('/new_comment', methods = ['GET', 'POST'])
+def new_comment():
+    form = CommentForm()
+
+    if form.validate_on_submit():
+        writer = form.author.data
+        com = form.comment.data
+
+        new_comment = Comment(comment = com, author = writer)
+        new_comment.save_comment()
+
+    title = 'New Comment'
+    return render_template('new_comment.html', title = title, comment_form = form)

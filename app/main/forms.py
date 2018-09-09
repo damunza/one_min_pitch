@@ -6,3 +6,8 @@ class PitchForm(FlaskForm):
     category = StringField('Category',validators=[Required()])
     pitch = TextAreaField('Your Pitch')
     submit = SubmitField('Submit')
+
+class CommentForm(FlaskForm):
+    author = StringField('Author of Comment')
+    comment = TextAreaField('Your Comment')
+    submit = SubmitField('Post')

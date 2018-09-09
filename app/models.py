@@ -9,7 +9,9 @@ class Pitch(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     category = db.Column(db.String)
     pitch = db.Column(db.String)
-    author = db.Column(db.Integer, db.ForeignKey("users.id"))
+    author =db.Column(db.Integer, db.ForeignKey("users.id"))
+
+
 
     def save_pitch(self):
         db.session.add(self)
@@ -45,6 +47,23 @@ class User(UserMixin, db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+
+class Comment(db.Model):
+
+    __tablename__ = 'comments'
+
+    id = db.Column(db.Integer, primary_key=True)
+    comment = db.Column(db.String)
+    author = db.Column(db.String(255))
+
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_comment(cls):
+        comment = Comment.query.all()
+        return comment
 
 @login_manager.user_loader
 def load_user(user_id):
