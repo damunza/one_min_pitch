@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51537396-28cb-4a4a-838e-54c0e6a8b5e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/pitch.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/pitch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/2340d9229651_added_a_column_that_stores_author_pitch_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/4bcdb3939057_created_a_column_in_pitchs_and_a_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/acc32ba91d81_created_a_column_in_users_and_a_virtual_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/bb70d539a3aa_added_a_table_for_users.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/ccd5d4abb431_initial_migration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/ee526d8e7b07_added_some_column.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/f7f9f729a353_created_a_table_to_store_comments.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
@@ -103,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -164,10 +147,10 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/app/auth/views.py" />
-        <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/app/main/forms.py" />
         <option value="$PROJECT_DIR$/app/main/views.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/manage.py" />
       </list>
     </option>
   </component>
@@ -441,16 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/comment.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -478,6 +451,16 @@
             <marker date="1536591134421" expanded="true" signature="698:699" ph="..." />
             <marker date="1536591134421" expanded="true" signature="698:704" ph="..." />
             <marker date="1536591134421" expanded="true" signature="1524:1990" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
