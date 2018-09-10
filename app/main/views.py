@@ -13,13 +13,13 @@ def index():
     form = RegistrationForm()
     return render_template('index.html', registration_form = form)
 
-@main.route('/root')
+@main.route('/home')
 def home():
     '''
     function that returns root.html page and its content
     '''
     title = 'Home'
-    return render_template('comment.html', title = title)
+    return render_template('root.html', title = title)
 
 @main.route('/pitch/<cat>')
 def category(cat):
@@ -55,7 +55,7 @@ def comment():
     comment = Comment.get_comment()
     print(comment)
     title = 'comments'
-    return render_template('root.html',title = title, comment = comment)
+    return render_template('comment.html',title = title, comment = comment)
 
 @main.route('/new_comment', methods = ['GET', 'POST'])
 def new_comment():
