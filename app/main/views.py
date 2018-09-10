@@ -44,6 +44,8 @@ def new_pitch():
 
         new_pitch.save_pitch()
 
+        return redirect(url_for('main.home'))
+
     title = 'New Pitch'
     return render_template('new_pitch.html', title=title, pitch_form = form)
 
@@ -67,6 +69,8 @@ def new_comment():
 
         new_comment = Comment(comment = com, author = writer)
         new_comment.save_comment()
+
+        return redirect(url_for('main.home'))
 
     title = 'New Comment'
     return render_template('new_comment.html', title = title, comment_form = form)
