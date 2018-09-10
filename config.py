@@ -17,6 +17,8 @@ class DevConfig(Config):
     '''
     development configuration child class
     '''
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://daniel:dan15done@localhost/pitch'
+
     DEBUG = True
 
 config_options = {
