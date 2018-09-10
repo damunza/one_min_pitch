@@ -40,7 +40,8 @@ python3.6 manage.py server
 
 - the app doesn't allow for voting
 - moving through the pages of the app requires pressing the back key a lot of times
-- the comments reflect on all pitches instead of individual pitches  
+- the comments reflect on all pitches instead of individual pitches 
+
 
 ### Contact info
 
