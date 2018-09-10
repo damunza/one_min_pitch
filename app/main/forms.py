@@ -8,6 +8,6 @@ class PitchForm(FlaskForm):
     submit = SubmitField('Submit')
 
 class CommentForm(FlaskForm):
-    author = StringField('Author of Comment')
+
     comment = TextAreaField('Your Comment')
     submit = SubmitField('Post')

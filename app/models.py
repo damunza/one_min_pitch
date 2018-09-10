@@ -9,7 +9,8 @@ class Pitch(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     category = db.Column(db.String)
     pitch = db.Column(db.String)
-    author =db.Column(db.Integer, db.ForeignKey("users.id"))
+    user_id =db.Column(db.Integer, db.ForeignKey("users.id"))
+    comments = db.relationship('Comment',backref = 'pitch', lazy = 'dynamic')
 
 
 
@@ -30,7 +31,8 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(255))
     email = db.Column(db.String(255), unique=True, index=True)
     pass_secure = db.Column(db.String(255))  # to store passwords
-    pitch = db.relationship('Pitch', backref = 'user', lazy = 'dynamic')
+    pitch = db.relationship('Pitch', backref = 'username', lazy = 'dynamic')
+    comments = db.relationship('Comment',backref = 'username', lazy = 'dynamic')
 
     @property
     def password(self):
@@ -46,7 +48,7 @@ class User(UserMixin, db.Model):
 
 
     def __repr__(self):
-        return f'User {self.username}'
+        return f' {self.username}'
 
 class Comment(db.Model):
 
@@ -54,15 +56,16 @@ class Comment(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     comment = db.Column(db.String)
-    author = db.Column(db.String(255))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    pitchs_id = db.Column(db.Integer, db.ForeignKey("pitchs.id"))
 
     def save_comment(self):
         db.session.add(self)
         db.session.commit()
 
     @classmethod
-    def get_comment(cls):
-        comment = Comment.query.all()
+    def get_comment(cls,id):
+        comment = Comment.query.filter_by(pitchs_id=id).all()
         return comment
 
 @login_manager.user_loader

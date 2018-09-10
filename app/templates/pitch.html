@@ -10,8 +10,11 @@
   </div>
   <div class="card-body">
     <p>{{c.pitch}}</p>
-    <p>written by {{c.author}}</p>
-    <a href="/comment">View Comments</a>
+    <p>written by {{c.username}}</p>
+    <a href="/comment/{{c.id}}">View Comments</a>
+  </div>
+  <div class="card-footer">
+    <a class="btn btn-primary btn-md" href="/new_comment/{{c.id}}">Add Comment</a>
   </div>
 </div>
 
